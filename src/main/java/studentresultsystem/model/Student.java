@@ -3,13 +3,19 @@ import java.util.ArrayList;
 
 public class Student {
     private String name;
-    private String RollNumber; 
+    private String rollNumber; 
     private ArrayList<Integer> marks; 
+    private ArrayList<String> subjects; 
 
-    Student(String Name, String RollNumber, int Marks){
+    public Student(String name, String rollNumber, ArrayList<Integer> marks, ArrayList<String> subjects){
+
+        if(subjects.size()!=marks.size()){
+            throw new IllegalArgumentException("Subject and Marks count should be same for generating the result"); 
+         }
         this.name=name; 
-        this.RollNumber=RollNumber; 
+        this.rollNumber=rollNumber; 
         this.marks=new ArrayList<>(marks); 
+        this.subjects = new ArrayList<>(subjects);
         }
 
          public void setName(String name){
@@ -20,13 +26,24 @@ public class Student {
             return  this.name; 
         }
 
-        public void setRollNumber(String RollNumber){
-            this.RollNumber=RollNumber; 
+        public void setRollNumber(String rollNumber){
+            this.rollNumber=rollNumber; 
         }
 
          public String getRollNumber(){
-            return this.RollNumber; 
+            return this.rollNumber; 
          }
+
+         public ArrayList<Integer> getMarks(){
+            return new ArrayList<>(this.marks); 
+         }
+
+         public ArrayList<String>  getSubjects(){
+            return new ArrayList<>(this.subjects); 
+         }
+
+         
+
 
 
     
