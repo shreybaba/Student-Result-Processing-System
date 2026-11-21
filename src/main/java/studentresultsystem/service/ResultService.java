@@ -1,18 +1,18 @@
 package studentresultsystem.service;
 import studentresultsystem.model.*;
 import java.util.ArrayList; 
-
+import studentresultsystem.exception.InvalidMarksException;
 public class ResultService {
        public Result calculateResult(Student student){
         ArrayList<Integer> marks = student.getMarks(); 
         int sum =0; 
         int count = marks.size(); 
            if(marks.isEmpty()){
-                throw new IllegalArgumentException("Marks cannot be empty"); 
+                throw new InvalidMarksException("Marks cannot be empty"); 
             }
         for(int i=0; i<count;i++){
             if(marks.get(i)>100||marks.get(i)<0){
-                throw new IllegalArgumentException("Marks must be between 0 and 100"); 
+                throw new InvalidMarksException("Marks must be between 0 and 100"); 
 
             }
             sum+= marks.get(i); 
