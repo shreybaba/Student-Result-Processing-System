@@ -1,4 +1,5 @@
 package studentresultsystem.model;
+import studentresultsystem.exception.InvalidStudentDataException;
 import java.util.ArrayList;
 
 public class Student {
@@ -10,7 +11,7 @@ public class Student {
     public Student(String name, String rollNumber, ArrayList<Integer> marks, ArrayList<String> subjects){
 
         if(subjects.size()!=marks.size()){
-            throw new IllegalArgumentException("Subject and Marks count should be same for generating the result"); 
+            throw new InvalidStudentDataException("Subject and Marks count should be same for generating the result"); 
          }
         this.name=name; 
         this.rollNumber=rollNumber; 
