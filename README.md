@@ -140,7 +140,7 @@ This project demonstrates the practical implementation of:
 
 ## Author
 
-**Shreyansh**
+**Shreyansh Pandey**
 
 GitHub: [@shreybaba](https://github.com/shreybaba)
 
