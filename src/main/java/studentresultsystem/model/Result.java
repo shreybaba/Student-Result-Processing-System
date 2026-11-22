@@ -1,31 +1,31 @@
 package studentresultsystem.model;
 
 public class Result {
-      private int totalmarks; 
-      private String grade; 
-      private double percentage; 
-      private boolean pass; 
+    private int totalMarks;
+    private String grade;
+    private double percentage;
+    private boolean pass;
 
-     public  Result(int totalmarks,String  grade, double percentage, boolean pass){
-        this.totalmarks = totalmarks; 
-        this. grade= grade; 
-        this. percentage = percentage; 
-        this . pass = pass; 
-      }
+    public Result(int totalMarks, String grade, double percentage, boolean pass) {
+        this.totalMarks = totalMarks;
+        this.grade = grade;
+        this.percentage = percentage;
+        this.pass = pass;
+    }
 
-      public int gettotalmarks(){
-        return this.totalmarks; 
-      }
+    public int getTotalMarks() {
+        return this.totalMarks;
+    }
 
-      public String getgrade(){
-        return this.grade; 
-   }
+    public String getGrade() {
+        return this.grade;
+    }
 
-   public boolean getpass(){
-    return this.pass;
-   } 
+    public boolean isPass() {
+        return this.pass;
+    }
 
-   public double getpercentage(){
-    return this.percentage; 
-   }
+    public double getPercentage() {
+        return this.percentage;
+    }
 }
